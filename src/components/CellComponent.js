@@ -26,10 +26,10 @@ class CellComponent extends React.Component {
             <td>
                 {
                     this.state.edit ?
-                    <input ref={this.inputRef} onBlur={() => this.onBlur()} value={this.props.value}
+                    <input className={'form-control text-center'} ref={this.inputRef} onBlur={() => this.onBlur()} value={this.props.value}
                     onChange={e => this.onChange(e, this.props.dataKey)}
                     />
-                    : <div onClick={() => this.onFocus()} > {this.props.value} </div>
+                    : <div className={'text-center'} onClick={() => this.onFocus()} > {this.props.value} </div>
                 }
             </td>
         );
